@@ -1,0 +1,19 @@
+DJANGO_MVC
+├── A_model
+│   ├── env_project_model
+│   └── project_model
+├── B_views
+│   ├── env_project_views
+│   └── project_views
+├── C_advance_views
+│   ├── env_project_advance_views
+│   └── project_advance_views
+├── README.md
+├── runserverB.png
+├── runserverC.png
+├── runseverA.png
+├── structure_project_advance_views.png
+├── structure_project_model.png
+└── structure_project_views.png
+
+9 directories, 7 files

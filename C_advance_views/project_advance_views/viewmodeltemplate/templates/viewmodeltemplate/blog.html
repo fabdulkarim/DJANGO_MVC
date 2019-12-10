@@ -17,6 +17,7 @@ Blog
                 <div class="content-text">
                     {{bo.content}}
                 </div>
+                <a href="{% url 'viewmodeltemplate:blogpost' bo.id %}">Baca Lebih Lanjut</a>
             </div>
         {% endfor %}
     {% endif %}

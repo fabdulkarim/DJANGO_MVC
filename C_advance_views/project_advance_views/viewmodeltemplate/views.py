@@ -11,19 +11,20 @@ def blog(request):
 def mentor(request):
     mentor_obj = Mentor.objects.all()
     return render(request, 'viewmodeltemplate/mentor.html', {
-        'mentor_obj': mentor_obj
+        'mentor_obj': mentor_obj,
     })
 
 def mentee(request):
-    mentee_obj = Mentee.objects.all()
+    print("akumasuk")
+    mentees = Mentee.objects.all()
     return render(request, 'viewmodeltemplate/mentee.html', {
-        'mentee_obj': mentee_obj
+        'mentees': mentees,
     })
 
 def blogpost(request, blog_id):
     blogpost_obj = Blog.objects.get(pk=blog_id)
     return render(request, 'viewmodeltemplate/blogpost.html',{
-        'blogpost_obj': blogpost_obj
+        'blogpost_obj': blogpost_obj,
     })
 
 def blog_input(request):

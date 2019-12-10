@@ -1,0 +1,27 @@
+{% block title %}
+Mentor
+{% endblock %}
+
+{% block content %}
+    {% include 'top-content.html' %}
+    {% if mentor_obj %}
+        {% for mo in mentor_obj %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div>
+                            <img src="{{mo.image}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <h2>{{mo.name}}</h2>
+                        <h3>{{mo.title}} {{mo.experience}}</h3>
+                        <div>{{mo.quotes}}</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>There are no Mentor available</p>
+    {% endif %}
+{% endblock %}

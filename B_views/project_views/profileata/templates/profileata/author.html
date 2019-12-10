@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Author</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "profileata/css/bootstrap.min.css" %}">
+    <link rel="stylesheet" href="{% static "profileata/css/style.css" %}">
+</head>
+<body>
+    <!-------------------------- header start -------------------------------->
+    <header>
+        <div class="container-fluid all-header">
+            <div class="row total-header align-item-center">
+                <div class="col-md-3">
+                    <span>Alpha Tech Academy</span>
+                </div>
+                <div class="col-md-4">
+                    <!-- NONE, for spacing -->
+                </div>
+                <div class="col-md-5">
+                    <div class="header--nav">
+                        <ul class="header--nav-list list-unstyled">
+                            <li><a href="{% url 'profileata:home' %}">Home</a></li>
+                            <li><a href="{% url 'profileata:blog' %}">Blog</a></li>
+                            <li><a href="{% url 'profileata:mentee' %}">Mentee</a></li>
+                            <li><a href="{% url 'profileata:mentor' %}">Mentor</a></li>
+                            <li><a href="">Author</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-------------------------- header end -------------------------------->
+
+    <!-- <span>TEST</span> -->
+    <!---------------------------main article start------------------------->
+    <div class="author-content">
+        <div class="content-top">
+            <div class="container-fluid">
+                <div class="row content-top-img">
+                    <img src="{% static "profileata/img/alpha-logo.png"%}" alt="logo alpha">
+                </div>
+                <div class="row content-top-texts">
+                    <h1>Alpha Tech Academy Blog</h1>
+                    <span>Alpha Tech Academy is a tech talent incubator that gives everyone (even non IT background) a chance to be a professional Tech Talent within 3 months.</span>
+                </div>
+            </div>
+        </div>
+        <!---------------------------------END SUB HEADER------------------------------------->
+        <div class="container author-real-content">
+            <div class="img-wrapper">
+                <img src="{% static "profileata/img/author.jpg"%}" alt="">
+            </div>
+            <h1>Nama Author</h1>
+            <div class="text-summary">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. In massa massa, tempus sed eros nec, suscipit sollicitudin ipsum. Quisque sed varius mi, at pharetra diam. Suspendisse eu enim ultrices, posuere dui vestibulum, interdum dui. Integer sed quam vel tellus porta hendrerit. Integer dapibus iaculis mi, vel pulvinar turpis vulputate eget. Mauris bibendum sagittis magna, in scelerisque turpis volutpat at. Etiam vel sollicitudin ex. Nunc sem nisi, dignissim sed luctus vitae, vehicula non felis. Ut sodales nulla vitae nisl blandit, eu luctus eros lacinia. Pellentesque non tellus justo. Etiam non pellentesque augue. Nulla facilisi. Nullam nec turpis nec lectus suscipit vulputate. Pellentesque placerat tempus mollis. 
+            </div>
+            <div class="list-data">
+                <ul class="list-unstyled">
+                    <li>Alamat : -</li><!--alamat-->
+                    <li>Telelephone : -</li><!--telephone-->
+                    <li>Education : -</li><!--education-->
+                    <li>Profession : -</li><!--profession-->
+                    <li>Nationality : -</li><!--nationality-->
+                    <li>Company : -</li><!--company-->
+                    <li>Email : -</li><!--email-->
+                    <li>Address : -</li><!--adress-->
+                </ul> 
+            </div>
+            <div class="google-map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3142334803124!2d112.60827644980287!3d-7.966441481577986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7882865ded0697%3A0xa77fa961a7c4e4b7!2sSepulsa%20Lodge%20Malang!5e0!3m2!1sen!2sid!4v1575969163721!5m2!1sen!2sid" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+    </div>
+    <!----------------------------main article end-------------------------->
+    <!---------------------------- footer start ---------------------------->
+    <footer>
+        <div class="container-fluid total-footer">
+            <div class="row footer-upper">
+                <div class="footer-up-text">
+                    <span>Our Product:</span>
+                </div>
+                <div class="footer-up-list">
+                    <ul class="list-unstyled daftar-gambar">
+                        <li><img src="{% static "profileata/img/logo-grey-alphapay.png"%}"></li> <!--alphapay-->
+                        <li><img src="{% static "profileata/img/logo-grey-sepulsa.png"%}"></li> <!--sepulsa-->
+                        <li><img src="{% static "profileata/img/logo-grey-alphabill.png"%}"></li> <!--alphabill-->
+                    </ul>
+                </div>
+            </div>
+            <div class="row footer-lower">
+                <span class="font-weight-bold">Contact Person:</span><span> Mobile phone: 0877 9609 9530 Email:academy@alphatech.id</span>
+            </div>
+        </div>
+    </footer>
+    <!---------------------------- footer end ------------------------------>
+</body>
+</html>

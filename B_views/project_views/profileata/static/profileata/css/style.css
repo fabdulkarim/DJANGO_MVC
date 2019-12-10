@@ -120,3 +120,19 @@
     padding: 0 15%;
     width: 100%;
 }
+
+.index-content-lower {
+    padding: 0 20% 0 20% ;
+    display: inline-block;
+    justify-content: center;
+}
+
+.index-content-lower h1 {
+    align-self: center;
+}
+.table-wrapper td {
+    justify-content: center;
+    margin: 15px;
+    padding: 15px;
+    border: solid 1px #ececec;
+}

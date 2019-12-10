@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Blog, Mentor, Mentee 
 # Create your views here.
 
@@ -38,9 +38,7 @@ def blogsubmit(request):
     Blog(image=image,title=title,content=content).save()
 
     blog_object = Blog.objects.all()
-    return render(request, 'viewmodeltemplate/blog.html', {
-        'blog_object': blog_object
-    })
+    return redirect('/blog')
 
 
 

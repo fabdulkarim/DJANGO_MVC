@@ -5,55 +5,19 @@ Blog
 {% endblock %}
 {% block content %}
 {% load static %}
-<div class="blog-content">
-    <div class="content-top">
-        <div class="container-fluid">
-            <div class="row content-top-img">
-                <img src="{% static "img/alpha-logo.png"%}" alt="logo alpha">
-            </div>
-            <div class="row content-top-texts">
-                <h1>Alpha Tech Academy Blog</h1>
-                <span>Alpha Tech Academy is a tech talent incubator that gives everyone (even non IT background) a chance to be a professional Tech Talent within 3 months.</span>
-            </div>
-        </div>
+    {% include 'top-content-blog.html' %}
+    <div class="button-blog-input">
+        <a href="{% url 'viewmodeltemplate:blog_input' %}">Tambahkan posting blog baru</a>
     </div>
-    <div class="container">
-        <div class="blog-mid">
-            <ul class="list-unstyled container">
-                <li>
-                    <img src="{% static "profileata/img/kendala-sepulsa.jpg"%}" alt="none">
-                    <div class="row">
-                        <!-- split to tanggal dan jumlah komen-->
-                        <div class="col-md-6 item-left">
-                            tanggal placeholder
-                        </div>
-                        <div class="col-md-6 item-right">
-                            jumlah komen placeholder
-                        </div>
-                    </div>
-                    <div class="blog-content-text">
-                        Bagi Sepulsa, kepuasan pelanggan adalah yang utama. Kami senantiasa mendengarkan keluhan maupun kendala yang kamu hadapi selama melakukan transaksi di Sepulsa. Umumnya pelanggan Sepulsa menghadapi kendala sebagai berikut: Status Order Pending. Jika transaksi pembayaran sudah selesai, namun status order kamumasih pending dalam jangka waktu 15 menit, segera hubungi tim Customer Service dengan menyertakan email...
-                    </div>
-                </li>
-                <li>
-                    <img src="{% static "profileata/img/sms.png"%}" alt="none">
-                    <div class="row">
-                        <!-- split to tanggal dan jumlah komen-->
-                        <div class="col-md-6 item-left">
-                            tanggal placeholder
-                        </div>
-                        <div class="col-md-6 item-right">
-                            jumlah komen placeholder
-                        </div>
-                    </div>
-                    <div class="blog-content-text">
-                        Kemudahan dalam berbagai transaksi perbankan memang banyak memberikan keuntungan bagi nasabah. Bayangkan saja, aktivitas jual beli yang pada awalnya membutuhkan waktu dan tempat, kini bisa dilakukan tanpa perlu beranjak dari tempat duduk kamu dan pembayaran lunas dalam hitungan detik dengan transaksi online. Namun tanpa disadari, kemudahan tersebut bukan berarti tanpa celah. Sebelum kita membahas lebih ...
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
-<!----------------------------main article end-------------------------->
-
+    {% if blog_object %}
+        {% for bo in blog_object %}
+            <div class="content-singles">
+                <img src="{{bo.image}}" alt="" class="content-img">
+                <h1>{{bo.title}}</h1>
+                <div class="content-text">
+                    {{bo.content}}
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
 {% endblock %}

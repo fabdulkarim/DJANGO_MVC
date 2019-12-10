@@ -30,4 +30,17 @@ def blogpost(request, blog_id):
 def blog_input(request):
     return render(request, 'viewmodeltemplate/blog_input.html',{})
 
+def blogsubmit(request):
+    image = request.POST['image']
+    title = request.POST['title']
+    content = request.POST['content']
+
+    Blog(image=image,title=title,content=content).save()
+
+    blog_object = Blog.objects.all()
+    return render(request, 'viewmodeltemplate/blog.html', {
+        'blog_object': blog_object
+    })
+
+
 
